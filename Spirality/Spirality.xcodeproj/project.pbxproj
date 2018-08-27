@@ -121,7 +121,6 @@
 				659EB8C21FC5E41B009078AA /* Frameworks */,
 				659EB8C31FC5E41B009078AA /* Resources */,
 				C2F8E25C1EF1F354BAC09B71 /* [CP] Embed Pods Frameworks */,
-				34E826EB7A68CB755B9BCF32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,21 +183,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34E826EB7A68CB755B9BCF32 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spirality/Pods-Spirality-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C2F8E25C1EF1F354BAC09B71 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

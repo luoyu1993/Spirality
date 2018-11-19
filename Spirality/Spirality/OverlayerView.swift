@@ -54,6 +54,29 @@ class OverlayerView: UIView {
         return slider
     }()
     
+    lazy var lineLayer: CALayer = {
+        let _layer = CALayer()
+        _layer.masksToBounds = true
+        _layer.backgroundColor = UIColor.white.withAlphaComponent(0.1).cgColor
+        return _layer
+    }()
+    
+    lazy var replicatorLayer: CAReplicatorLayer = {
+        let size = UIScreen.main.bounds.size
+        let length = max(size.width, size.height)
+        let _layer = CAReplicatorLayer()
+        _layer.masksToBounds = true
+        _layer.frame = CGRect(x: 0, y: 0, width: length, height: length)
+        _layer.instanceCount = Int(slider.value)
+        let angle = -CGFloat.pi * 2 / CGFloat(_layer.instanceCount)
+        _layer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
+        
+        self.lineLayer.frame = CGRect.init(x: length/2.0, y: -length, width: 1/UIScreen.main.scale, height: length*1.4)
+        _layer.addSublayer(self.lineLayer)
+        layer.insertSublayer(_layer, at: 0)
+        return _layer
+    }()
+    
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
         if view == self && (!colorPicker.isHidden || !slider.isHidden) {
@@ -65,6 +88,11 @@ class OverlayerView: UIView {
     }
     
     override func layoutSubviews() {
+        let size = UIScreen.main.bounds.size
+        let length = max(size.width, size.height)
+        replicatorLayer.frame = CGRect(x: -(length-bounds.size.width)/2.0, y: -(length-bounds.size.height)/2.0, width: length, height: length)
+//        replicatorLayer.frame = CGRect(x: 0, y: 0, width: length, height: length)
+
         colorPicker.center = CGPoint(x: frame.width/2.0, y: frame.height/2.0)
         let rect = spiralityBtn.convert(spiralityBtn.bounds, to: self)
         slider.frame = CGRect.init(x: rect.maxX+4, y: rect.midY - 30/2.0, width: 200, height: 30)
@@ -148,6 +176,10 @@ private extension OverlayerView {
         let count = Int(slider.value)
         spiralityCountLabel.text = "\(count)"
         delegate?.numberOfDrawer = count
+        
+        replicatorLayer.instanceCount = count
+        let angle = -CGFloat.pi * 2 / CGFloat(count)
+        replicatorLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
     }
 }
 

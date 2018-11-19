@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3g-D3-rLV" userLabel="line_h">
-                    <rect key="frame" x="154.5" y="333" width="66" height="1"/>
+                    <rect key="frame" x="154.5" y="333.5" width="66" height="0.5"/>
                     <color key="backgroundColor" white="1" alpha="0.1483304794520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.5" id="6Sh-3B-DRR"/>
@@ -24,16 +24,12 @@
                     </constraints>
                 </view>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yuu-Dk-EWx" userLabel="line_v">
-                    <rect key="frame" x="187" y="300.5" width="1" height="66"/>
+                    <rect key="frame" x="187.5" y="300.5" width="0.5" height="66"/>
                     <color key="backgroundColor" white="1" alpha="0.1483304794520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="0.5" id="50t-VA-F3F"/>
                         <constraint firstAttribute="height" constant="66" id="eDK-YK-eno"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qR6-Ke-iXw">
-                    <rect key="frame" x="0.0" y="0.0" width="50" height="667"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.82066031678082196" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Ra-l8o">
                     <rect key="frame" x="0.0" y="0.0" width="50" height="667"/>
@@ -46,14 +42,14 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHC-O8-7AD">
-                            <rect key="frame" x="0.0" y="100.5" width="50" height="75.5"/>
+                            <rect key="frame" x="0.0" y="100.5" width="50" height="75"/>
                             <state key="normal" image="circle"/>
                             <connections>
                                 <action selector="spiralityAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7w2-Bp-BeA"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-dr-egM">
-                            <rect key="frame" x="0.0" y="265.5" width="50" height="75.5"/>
+                            <rect key="frame" x="0.0" y="266" width="50" height="75"/>
                             <state key="normal" image="delete"/>
                             <connections>
                                 <action selector="deleteAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Sm-kL-DlT"/>
@@ -68,7 +64,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd7-aT-DPa">
-                            <rect key="frame" x="0.0" y="416.5" width="50" height="75.5"/>
+                            <rect key="frame" x="0.0" y="416.5" width="50" height="75"/>
                             <state key="normal" image="arrow_right"/>
                             <state key="disabled" image="arrow_right_dis"/>
                             <connections>
@@ -76,7 +72,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhD-iD-B1Y">
-                            <rect key="frame" x="0.0" y="492" width="50" height="75"/>
+                            <rect key="frame" x="0.0" y="491.5" width="50" height="75.5"/>
                             <state key="normal" image="save"/>
                             <connections>
                                 <action selector="saveToAlbumAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DCW-0r-Qnt"/>
@@ -98,13 +94,13 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hC-Ye-tij">
-                            <rect key="frame" x="19" y="152" width="13" height="12"/>
+                            <rect key="frame" x="18.5" y="152" width="13" height="12"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgw-Q6-EHj">
-                            <rect key="frame" x="0.0" y="191" width="50" height="74.5"/>
+                            <rect key="frame" x="0.0" y="190.5" width="50" height="75.5"/>
                             <state key="normal" image="pen"/>
                             <state key="selected" image="bucket"/>
                             <connections>
@@ -112,7 +108,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.8495558647260274" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="4hC-Ye-tij" firstAttribute="centerY" secondItem="jHC-O8-7AD" secondAttribute="centerY" constant="20" id="0rl-8H-oSu"/>
                         <constraint firstItem="LaP-l8-xw1" firstAttribute="top" secondItem="u8I-dr-egM" secondAttribute="bottom" id="2ej-iI-0mV"/>
@@ -156,14 +152,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="qR6-Ke-iXw" firstAttribute="trailing" secondItem="7ee-Ra-l8o" secondAttribute="trailing" id="Ao6-pX-m3L"/>
                 <constraint firstItem="J3g-D3-rLV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NQG-ld-bw4"/>
                 <constraint firstItem="Yuu-Dk-EWx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RtS-XT-dPW"/>
-                <constraint firstItem="qR6-Ke-iXw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Sq4-6j-1XA"/>
-                <constraint firstAttribute="bottom" secondItem="qR6-Ke-iXw" secondAttribute="bottom" id="Vot-eK-l59"/>
                 <constraint firstItem="Yuu-Dk-EWx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZLv-DO-upu"/>
                 <constraint firstItem="7ee-Ra-l8o" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="fgk-cX-QCh"/>
-                <constraint firstItem="qR6-Ke-iXw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hDC-mb-Krs"/>
                 <constraint firstItem="7ee-Ra-l8o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q7g-wq-wbO"/>
                 <constraint firstItem="J3g-D3-rLV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vZn-UC-EgJ"/>
                 <constraint firstItem="7ee-Ra-l8o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="w3z-hR-7N5"/>
@@ -181,20 +173,20 @@
                 <outlet property="spiralityBtn" destination="jHC-O8-7AD" id="HJu-VG-pr8"/>
                 <outlet property="spiralityCountLabel" destination="4hC-Ye-tij" id="MTg-8c-9wx"/>
             </connections>
-            <point key="canvasLocation" x="-8.5" y="-6.5"/>
+            <point key="canvasLocation" x="-321" y="-14"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow_left" width="20" height="15"/>
-        <image name="arrow_left_dis" width="20" height="15"/>
-        <image name="arrow_right" width="20" height="15"/>
-        <image name="arrow_right_dis" width="20" height="15"/>
-        <image name="bucket" width="20" height="17"/>
+        <image name="arrow_left" width="60" height="45"/>
+        <image name="arrow_left_dis" width="60" height="45"/>
+        <image name="arrow_right" width="60" height="45"/>
+        <image name="arrow_right_dis" width="60" height="45"/>
+        <image name="bucket" width="60" height="52"/>
         <image name="circle" width="30" height="30"/>
-        <image name="color_picker" width="20" height="20"/>
-        <image name="delete" width="20" height="20"/>
-        <image name="pen" width="22" height="22"/>
-        <image name="save" width="20" height="20"/>
-        <image name="time" width="20" height="20"/>
+        <image name="color_picker" width="60" height="60"/>
+        <image name="delete" width="60" height="60"/>
+        <image name="pen" width="66" height="66"/>
+        <image name="save" width="60" height="60"/>
+        <image name="time" width="60" height="60"/>
     </resources>
 </document>

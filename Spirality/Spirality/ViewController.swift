@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         let lanuchController = UIStoryboard.init(name: "LaunchScreen", bundle: nil).instantiateViewController(withIdentifier: "LaunchScreen")
         lanuchController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(lanuchController.view)
-        UIView.animate(withDuration: 1, delay: 1, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: 1, delay: 1, options: UIView.AnimationOptions.curveEaseInOut, animations: {
             lanuchController.view.alpha = 0
         }, completion: { _ in
             lanuchController.view.removeFromSuperview()

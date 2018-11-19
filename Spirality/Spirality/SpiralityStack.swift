@@ -132,7 +132,7 @@ extension SpiralityStack {
                     }
                 });
                 animation.isRemovedOnCompletion = false
-                animation.fillMode = kCAFillModeForwards
+                animation.fillMode = CAMediaTimingFillMode.forwards
                 layer.add(animation, forKey: "animation");
             })
         }

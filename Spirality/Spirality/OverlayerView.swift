@@ -35,7 +35,7 @@ class OverlayerView: UIView {
         neatColorPicker.layer.cornerRadius = neatColorPicker.frame.width/2.0
         neatColorPicker.hexLabel.textColor = UIColor.lightGray
         neatColorPicker.layer.masksToBounds = true
-        neatColorPicker.addTarget(self, action: #selector(colorPickerChanged), for: UIControlEvents.valueChanged)
+        neatColorPicker.addTarget(self, action: #selector(colorPickerChanged), for: UIControl.Event.valueChanged)
         addSubview(neatColorPicker)
         neatColorPicker.layout()
         return neatColorPicker
@@ -49,7 +49,7 @@ class OverlayerView: UIView {
         slider.value = 30
         slider.isHidden = true
         slider.clipsToBounds = true
-        slider.addTarget(self, action: #selector(spiralityCountChanged), for: UIControlEvents.valueChanged)
+        slider.addTarget(self, action: #selector(spiralityCountChanged), for: UIControl.Event.valueChanged)
         addSubview(slider)
         return slider
     }()

@@ -46,7 +46,7 @@ class SpiralityCanvas: UIView {
         if UserDefaults.standard.bool(forKey: FirstPreLoadImageKey) {
             return nil
         } else {
-            firstLoadImage = UIImage(named: "default_load.jpeg")
+            firstLoadImage = UIImage(named: "lanuch_load.jpg")
         }
         let imageLayer = CALayer()
         imageLayer.contents = firstLoadImage.cgImage

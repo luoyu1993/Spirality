@@ -8,40 +8,6 @@
 
 import UIKit
 
-
-//class SpiralityStackIterator: IteratorProtocol {
-//    typealias Element = SpiralityDrawRecordItem
-//    var array: [Element]
-//    var currentIndex = 0
-//
-//    init(array:[Element]) {
-//        self.array = array
-//    }
-//
-//    func next() -> Element? {
-//        if currentIndex < 0 { return nil }
-//        else {
-//            let element = array[currentIndex]
-//            currentIndex += 1
-//            return element
-//        }
-//    }
-//}
-//
-//struct SpiralityStackSquence: Sequence {
-//
-//    var historyRecords: [SpiralityDrawRecordItem]
-//
-//    init(historyRecords:[SpiralityDrawRecordItem]) {
-//        self.historyRecords = historyRecords
-//    }
-//
-//    typealias Iterator = SpiralityStackIterator
-//
-//    func makeIterator() -> SpiralityStackIterator {
-//        return SpiralityStackIterator.init(array: historyRecords)
-//    }
-//}
 enum PenStyle {
     case pencil
     case bucket
